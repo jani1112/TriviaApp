@@ -1,38 +1,229 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  background: lightcyan;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Navbar{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 65px;
+  background: linear-gradient(180deg, #32167C 0%, #1F1147 54.69%);
+  color: white;
+  padding: 10px;
+}
+
+.Navbar-Dark{
+  display: flex;
+  align-items: center;
+  height: 65px;
+  background: black;
+  color: white;
+  padding: 10px;
+}
+
+.meme-face{
+  height: 100%;
+  margin-left: 10px;
+}
+
+.footer-text{
+  width: 100%;
+  text-align: center;
+  color: white;
+  background: linear-gradient(180deg, #32167C 0%, #1F1147 54.69%);
+}
+
+.footer-text-dark{
+  width: 100%;
+  text-align: center;
+  color: white;
+  background:black
+}
+
+.quizz-main{
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 20px;
+  background: linear-gradient(180deg, #32167C 0%, #1F1147 54.69%);
+}
+
+.quizz-main-dark{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/*Tooggle Switch Css*/
+
+.mode-text{
+  display: flex;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
 }
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: black;
+  border: 1px solid white;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*End of Toggle Switch Css*/
+
+
+.landing-page{ 
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  background: linear-gradient(180deg, #32167C 0%, #1F1147 54.69%);
+}
+
+.landing-page-dark{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  background: black
+}
+
+.landing-img{
+/* Gradient */
+  background: linear-gradient(180deg, #32167C 0%, #1F1147 54.69%);
+  box-shadow: 8px 0px 8px rgba(0, 0, 0, 0.25); 
+} 
+
+
+.landing-category{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  width: 200x;
+}
+
+#quiizcat {
+  border-radius: 10%;
+  width: 150px;
+  padding: 5px;
+  align-content: center;
+  margin-top:20px;
+  color: #1F1147;
+}
+
+.start-btn{
+  margin-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  color: white;
+  border-radius: 20%;
+  background: linear-gradient(180deg, #32167C 0%, #1F1147 54.69%);
+}
+
+.start-btn::active{
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+/*QizzQ Styling */
+
+.quizz-main{
+  display: flex;
+  flex-direction: row;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.quizz-main-dark{
+  display: flex;
+  flex-direction: row;
+  font-weight: 400;
+  font-size: 20px;
+  background: black;
+}
+
+.quizz-head-category{
+  padding-left: 33%;
+}
+
+.quizz-head-timer{
+padding-left: 33%;
+}
+
+.quizz-section{ 
+  margin-top: 200px;
+}
+
+/* .quizz-question{
+
+} */
+
+/* QuizzQ Styling End */
