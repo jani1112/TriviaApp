@@ -45,22 +45,6 @@ body {
   background:black
 }
 
-.quizz-main{
-  width: 100%;
-  height: 100%;
-  color: white;
-  padding: 20px;
-  background: linear-gradient(180deg, #32167C 0%, #1F1147 54.69%);
-}
-
-.quizz-main-dark{
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  background: black;
-  color: white;
-}
-
 /*Tooggle Switch Css*/
 
 .mode-text{
@@ -196,18 +180,15 @@ input:checked + .slider:before {
 /*QizzQ Styling */
 
 .quizz-main{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 20px;
   display: flex;
   flex-direction: row;
   font-weight: 400;
   font-size: 20px;
-}
-
-.quizz-main-dark{
-  display: flex;
-  flex-direction: row;
-  font-weight: 400;
-  font-size: 20px;
-  background: black;
 }
 
 .quizz-head-category{
@@ -215,15 +196,89 @@ input:checked + .slider:before {
 }
 
 .quizz-head-timer{
-padding-left: 33%;
+  padding-left: 33%
+
 }
 
-.quizz-section{ 
-  margin-top: 200px;
+.quizz-main-section{
+  background: linear-gradient(180deg, #32167C 0%, #1F1147 54.69%);
+  display: flex;
+  flex-direction: column;
+  color:white
 }
 
-/* .quizz-question{
+.quizz-main-section-dark{
+  background: black;
+  display: flex;
+  flex-direction: column;
+  color:white
+}
 
-} */
+.quizz-question{
+  text-align: center;
+  font-size: 40px;
+}
 
+.quizz-options{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 90px
+}
+
+.options{
+  width: 400px;
+  padding:10px;
+  margin: 5px; 
+  cursor: pointer;
+  border-radius: 34px;
+}
+
+
+.options:hover{
+  background-color: aqua;
+}
+
+.quizz-end{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 40px;
+  background: linear-gradient(180deg, #32167C 0%, #1F1147 54.69%);
+  color: white;
+  padding-top: 20px;
+  height: 565px;  
+}
+
+.quizz-end-dark{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 40px;
+  background: black;
+  color: white;
+  padding-top: 20px;
+  height: 565px;  
+}
+
+.restart-btn{
+  margin-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  color: white;
+  border-radius: 20%;
+  background: linear-gradient(180deg, #32167C 0%, #1F1147 54.69%);
+}
+
+.quizz-error{
+  font-size: 40px;
+  text-align: center;
+  background: linear-gradient(180deg, #32167C 0%, #1F1147 54.69%);
+  color: white;
+}
 /* QuizzQ Styling End */

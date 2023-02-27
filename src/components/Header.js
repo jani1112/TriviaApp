@@ -11,6 +11,7 @@ export default function HeaderComp(props){
                     <span className="slider round"></span>
                 </label>
                 <span className="mode-text">Dark</span>
+                {props.timer && props.timer}
             </nav>
         </header>
 )

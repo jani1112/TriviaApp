@@ -10,7 +10,11 @@ const CategoriesData =  [
                 {
                 "value":15,
                 "label": "Entertainment - Video Games"
-                }         
+                },
+                {
+                    "value":19,
+                    "label": "Mathematics"
+                }            
   ]
   export default CategoriesData
 
