@@ -7,10 +7,9 @@ function Timer({gamestate}){
         SetTimer((prevTimeRemaining) => prevTimeRemaining - 1);
       }, 1000);
   
-      if (Timer <= 0) {
+      if (Timer <= 0) { 
         alert("Times up!!")
         gamestate("end")
-        clearInterval(intervalId);
       }
       return () => {
         clearInterval(intervalId);     

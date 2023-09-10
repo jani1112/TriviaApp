@@ -20,16 +20,24 @@ function App() {
     const [currAns,SetcurrAns] = useState(0)
     const [TrivaData,setTriviaData] = useState([])
     const [isLoading,setisLoading] = useState(false)
-
+    
     
     //Fetch Trivia Data
+    // async function GetTriviaData(id){
+    //   setisLoading(true)
+    //   const Data = await fetch(`https://opentdb.com/api.php?amount=10&category=${id}&difficulty=medium`)
+    //   const res = await Data.json()
+    //   setTriviaData(res.results)
+    //   setisLoading(false)
+    //   }
+
     async function GetTriviaData(id){
       const Data = await fetch(`https://opentdb.com/api.php?amount=10&category=${id}&difficulty=medium`)
       const res = await Data.json()
-      setTriviaData(res.results)
-      setisLoading(false)
+      setTriviaData(res.results)        
+      setisLoading(false)            
       }
-
+      
     function toggleMode(e){ 
       setDarkMode(prevData => !prevData)
     }
@@ -41,8 +49,8 @@ function App() {
     function StartGame(e){
       e.preventDefault();
       if(CurrCategory.id !== ''){
+          setisLoading(true)  
           GetTriviaData(CurrCategory.id)
-          setisLoading(true)
           setGameStatus("quizz")
       }
       else{
@@ -51,7 +59,7 @@ function App() {
   }
 
       function NextQues(is_correct) {
-        if(is_correct === true || is_correct === "true"){
+        if(is_correct === true){
           SetcurrAns(prevData => prevData + 1)
         }
 
@@ -67,6 +75,7 @@ function App() {
         setCurrCategory({id:''})
         setErrmsg('')
         SetcurrQCount(0)
+        SetcurrAns(0)
         setTriviaData([])
       }
     
@@ -83,7 +92,7 @@ function App() {
         <Header darkmode ={DarkMode} toggle={toggleMode} timer={<Timer gamestate={UpdateGameStatus}/>} />
               }
         {GameStatus === "home" && <Home darkmode ={DarkMode} errmsg={Errmsg} StartGame={StartGame} handleChange={handleChange}/>}
-        {isLoading ?  <div className="quizz-main">Loading</div> :
+        {isLoading ?  <div className="quizz-main"><span>Loading</span></div> :
         GameStatus === "quizz" && 
         <QuizzQ 
         darkmode ={DarkMode} 

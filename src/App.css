@@ -191,6 +191,11 @@ input:checked + .slider:before {
   font-size: 20px;
 }
 
+.quizz-main span{
+  color: black;
+  align-self: center;
+} 
+
 .quizz-head-category{
   padding-left: 33%;
 }
