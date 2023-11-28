@@ -1,6 +1,5 @@
-Basic Trivia Quizz Application build on React Framework.
 
-# Getting Started with Create React App
+# Basic Trivia Quizz Application build on React Framework.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
